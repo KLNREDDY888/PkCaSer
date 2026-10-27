@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7f4" />
+    <meta name="description" content="A clear, partner-approved way to request a credit card cash advance into your own savings account." />
+    <title>Moneta — Card to savings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=10" />
+  </head>
+  <body>
+    <section class="login-screen" id="login-screen" aria-labelledby="login-title">
+      <div class="login-card">
+        <a class="brand login-brand" href="#login-screen" aria-label="Moneta home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 24V8h4.2l4.8 7 4.8-7H25v16h-4.1V14.5L16 21.3l-4.9-6.8V24H7Z" fill="currentColor"/><circle cx="25" cy="7" r="3" fill="#A5E56D"/></svg></span><span class="brand-name">moneta<span class="brand-period">.</span></span></a>
+        <span class="login-label"><i></i> INDIA PILOT PREVIEW</span>
+        <h1 id="login-title">Welcome back</h1>
+        <p class="login-copy">Sign in to view your card wallet and transfer workspace.</p>
+        <form id="login-form" class="login-form">
+          <label for="login-email">Email address</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" required placeholder="you@example.com" />
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password" />
+          <button class="login-button live-login" type="submit">Sign in securely</button>
+        </form>
+        <p class="login-legal">Create an account with an email and a password of at least 12 characters. The local prototype saves salted password hashes in auth-store.json; it does not offer email verification or password reset.</p>
+        <div class="login-divider"><span></span><small>PREVIEW ONLY</small><span></span></div>
+        <button class="auth-mode-button" type="button" data-action="auth-mode">Create account</button>
+        <button class="login-button demo-login" type="button" data-action="demo-login">Explore the fictional demo</button>
+      </div>
+    </section>
+
+    <div class="app-shell" id="app-shell" hidden>
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Moneta home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 24V8h4.2l4.8 7 4.8-7H25v16h-4.1V14.5L16 21.3l-4.9-6.8V24H7Z" fill="currentColor"/><circle cx="25" cy="7" r="3" fill="#A5E56D"/></svg></span>
+          <span class="brand-name">moneta<span class="brand-period">.</span></span>
+        </a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="nav-list">
+          <a class="nav-item active" href="#home" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><path d="M3.5 9h17M7.5 15h3"/></svg></span>Overview</a>
+          <a class="nav-item" href="#cards"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18m-14 5h3"/></svg></span>My cards<span class="card-count" id="card-count">0</span></a>
+          <a class="nav-item" href="#transfer"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14M15 3l4 4-4 4M19 17H5m4 4-4-4 4-4"/></svg></span>New transfer</a>
+          <a class="nav-item" href="#activity"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-6"/></svg></span>Activity</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card help-card-button" role="button" tabindex="0" data-action="help">
+            <div class="help-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 1 1 4.4 1.3c-.7 1-2.1 1.2-2.1 2.7m0 3h.01"/></svg></div>
+            <div><strong>Pilot updates</strong><p>Partner setup is in progress.</p><span class="help-link">Support details will be shared before pilot access opens.</span></div>
+          </div>
+          <div class="profile-row"><div class="avatar" id="sidebar-avatar">D</div><div class="profile-copy"><strong id="sidebar-user-name">Demo user</strong><span>India · INR</span></div><button class="more-button" type="button" aria-label="More account options" data-action="profile">···</button></div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="home">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 24V8h4.2l4.8 7 4.8-7H25v16h-4.1V14.5L16 21.3l-4.9-6.8V24H7Z" fill="currentColor"/><circle cx="25" cy="7" r="3" fill="#A5E56D"/></svg></span><span class="brand-name">moneta<span class="brand-period">.</span></span></div>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong>Overview</strong></div>
+          <div class="top-actions"><span class="country-chip"><span class="india-dot"></span> India</span><button class="icon-button notification-button" type="button" aria-label="Notifications" data-action="notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><i></i></button><button id="top-avatar" class="avatar small-avatar avatar-button" type="button" aria-label="Profile" data-action="profile">P</button></div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="welcome-row">
+            <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR MONEY, IN MOTION</div><h1>Your transfer workspace</h1><p class="welcome-sub">A clear view of your card-to-savings transfers.</p></div>
+            <div class="date-display"><span class="date-icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17"/></svg></span><span id="today-date">Today</span></div>
+          </section>
+
+          <section class="status-banner" id="partner-status" role="status" aria-live="polite">
+            <div class="status-symbol"><svg viewBox="0 0 24 24"><path d="M12 3.5 21 20H3l9-16.5Z"/><path d="M12 9v4.5m0 3h.01"/></svg></div>
+            <div class="status-text"><strong>Transfers are not available yet</strong><p id="status-message">We’re connecting an approved bank or card issuer. Your account details are not being collected.</p></div>
+            <span class="status-tag"><i></i><span id="status-label">Partner setup</span></span>
+            <button class="demo-launch" id="start-demo" type="button">Try interactive demo</button>
+          </section>
+          <div class="demo-disclaimer" id="demo-disclaimer" hidden><strong>DEMO MODE</strong><span>Sample accounts and simulated transfers only. No funds move and no real financial details are used.</span><button type="button" data-action="reset-demo">Reset demo</button></div>
+
+          <section class="overview-grid" aria-label="Transfer overview">
+            <article class="panel transfer-panel" id="transfer">
+              <div class="panel-heading"><div><span class="section-kicker">NEW TRANSFER</span><h2>Move money to savings</h2><p class="panel-intro">Request a cash advance from your credit card to your own savings account.</p></div><span class="secure-badge"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg> Secure</span></div>
+              <div class="step-indicator"><span class="step-number" id="step-number">1</span><div><strong id="step-title">Choose your accounts</strong><span id="step-copy">Link accounts with our approved partner or try sample accounts.</span></div><span class="step-count" id="step-count">STEP 1 OF 3</span></div>
+              <div class="account-selectors">
+                <div class="account-box"><div class="account-topline"><span>FROM · CREDIT CARD</span><span class="not-linked">NOT LINKED</span></div><div class="account-empty"><span class="account-icon card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18m-14 5h3"/></svg></span><div><strong>Link an eligible card</strong><span>Issuer approval required</span></div></div></div>
+                <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></div>
+                <div class="account-box"><div class="account-topline"><span>TO · SAVINGS ACCOUNT</span><span class="not-linked">NOT LINKED</span><button class="account-manage" type="button" data-action="add-savings">Add details</button></div><div class="account-empty"><span class="account-icon bank-icon"><svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5M5 10v8m4-8v8m6-8v8m4-8v8M3 20h18M2 22h20"/></svg></span><div><strong>Link your savings account</strong><span>Must be in your name</span></div></div></div>
+              </div>
+              <button class="button button-primary link-button" type="button" id="link-accounts"><svg viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg><span>Link accounts</span><span class="button-lock">Demo</span></button>
+              <div class="amount-section"><label for="amount">TRANSFER AMOUNT</label><div class="amount-input-wrap"><span class="currency-symbol">₹</span><input id="amount" type="number" inputmode="numeric" min="500" max="15000" step="100" placeholder="0.00" aria-describedby="amount-help" /><span class="amount-suffix">INR</span></div><div class="amount-helper" id="amount-help"><span>₹500–₹15,000 in the sample demo.</span><span>Demo limit only</span></div></div>
+              <div class="quote-panel" id="quote-panel" hidden></div>
+              <div class="fee-note"><span class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg></span><p>Your issuer may charge a cash advance fee and interest. You’ll see the exact costs and terms before confirming.</p></div>
+              <button class="button button-confirm" type="button" id="continue-transfer">Continue to review <span aria-hidden="true">→</span></button>
+              <p class="same-name-note"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>Transfers are only to a savings account in your name.</p>
+            </article>
+
+            <div class="right-column">
+              <article class="panel readiness-panel">
+                <div class="readiness-top"><div><span class="section-kicker">GETTING STARTED</span><h2 id="readiness-title">Almost ready</h2></div><div class="progress-ring" id="progress-ring"><svg viewBox="0 0 46 46"><circle class="ring-bg" cx="23" cy="23" r="19"/><circle class="ring-progress" cx="23" cy="23" r="19"/></svg><span id="progress-value">0%</span></div></div>
+                <p class="readiness-copy" id="readiness-copy">We’re preparing a secure way to connect with an approved partner.</p>
+                <div class="checklist">
+                  <div class="check-row"><span class="check-state pending" id="check-partner"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/></svg></span><span><strong>Partner approval</strong><small id="check-partner-copy">Bank or issuer setup in progress</small></span><span class="row-state" id="check-partner-status">IN PROGRESS</span></div>
+                  <div class="check-row"><span class="check-state" id="check-identity"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/></svg></span><span><strong>Demo identity</strong><small>Sample profile only</small></span></div>
+                  <div class="check-row"><span class="check-state" id="check-accounts"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/></svg></span><span><strong>Link your accounts</strong><small id="check-accounts-copy">Card and savings account in your name</small></span></div>
+                </div>
+                <div class="readiness-footer"><span class="sparkle">✳</span><span>Partner approval is required before this pilot can open.</span></div>
+              </article>
+
+              <article class="panel activity-panel" id="activity">
+                <div class="activity-heading"><div><span class="section-kicker">YOUR ACTIVITY</span><h2>Recent transfers</h2></div><button class="view-all" type="button" id="view-all" data-action="view-all">View all <span aria-hidden="true">→</span></button></div>
+                <div id="activity-content"><div class="empty-activity"><div class="empty-illustration"><span class="empty-circle circle-one"></span><span class="empty-circle circle-two"></span><div class="empty-receipt"><span></span><span></span><span></span></div><div class="empty-check">↗</div></div><strong>No transfers yet</strong><p>Start the interactive demo to see<br />sample activity here.</p></div></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="cards-panel panel" id="cards" aria-labelledby="cards-title">
+            <div class="cards-heading"><div><span class="section-kicker">CARD WALLET</span><h2 id="cards-title">My credit cards</h2><p>Real cards can only be linked through an approved, secure partner.</p></div><button class="add-card-button" type="button" data-action="add-card"><span>＋</span> Add a card</button></div>
+            <div class="saved-cards" id="saved-cards"><div class="cards-empty"><span class="empty-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18m-14 5h3"/></svg></span><strong>No cards added</strong><p>Sign in to the demo and add a sample card to see its card image here.</p><button type="button" data-action="add-card">Add a sample card</button></div></div>
+            <div class="cards-safety"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Never enter your full card number, CVV, PIN, password, or OTP in this demo.</span></div>
+          </section>
+
+          <section class="learn-strip"><div class="learn-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m7 10.5 5 2.8 5-2.8M5 9v7l7 4 7-4V9"/></svg></div><div><strong>Know before you transfer</strong><p>A cash advance works differently from a purchase. Fees, interest, and limits depend on your card issuer.</p></div><a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noreferrer">Learn about card terms <span aria-hidden="true">↗</span></a></section>
+          <footer class="page-footer"><span>Moneta · India pilot preview</span><div><button type="button" data-action="privacy">Privacy</button><button type="button" data-action="terms">Terms</button><button type="button" data-action="help">Help</button></div><span class="footer-secure"><i></i> Partner approval required</span></footer>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden><section class="app-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="Close dialog" data-action="close-modal">×</button><div id="modal-content"></div></section></div>
+    <script type="module" src="/app.js?v=10"></script>
+  </body>
+</html>
