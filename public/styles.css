@@ -54,8 +54,8 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .sidebar { width: 246px; position: fixed; z-index: 4; inset: 0 auto 0 0; background: #fff; border-right: 1px solid var(--line); padding: 27px 18px 18px; display: flex; flex-direction: column; }
 .brand { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 51px 9px; width: fit-content; }
 .brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--green); color: white; }
-.brand-mark svg { width: 25px; height: 25px; }
-.brand-name { font: 800 22px/1 Manrope, sans-serif; letter-spacing: -1.4px; color: #22312d; }
+.brand-mark { font: 800 11px/1 Manrope, sans-serif; letter-spacing: 0; }
+.brand-name { font: 800 22px/1 Manrope, sans-serif; letter-spacing: 0; color: #22312d; }
 .brand-period { color: #8bbf56; }
 .sidebar-label, .section-kicker { color: #98a19c; letter-spacing: 1.15px; font-weight: 700; font-size: 9px; }
 .sidebar-label { padding: 0 12px; margin: 0 0 12px; }
@@ -455,7 +455,7 @@ input[aria-invalid="true"] { border-color: #c87366; box-shadow: 0 0 0 2px rgba(2
   .topbar { height: 58px; padding: 0 17px; }
   .mobile-brand { display: flex; align-items: center; gap: 7px; }
   .mobile-brand .brand-mark { width: 27px; height: 27px; border-radius: 8px; }
-  .mobile-brand .brand-mark svg { width: 22px; height: 22px; }
+  .mobile-brand .brand-mark { font-size: 10px; }
   .mobile-brand .brand-name { font-size: 19px; }
   .breadcrumb { display: none; }
   .top-actions { gap: 12px; }

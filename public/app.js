@@ -305,7 +305,7 @@ function showCardDetails(id) {
   if (!card) return showToast('That sample card is no longer in your wallet.');
   const selected = demo.selectedCardId === id;
   showModal('Sample card details',
-    `<div class="wallet-card detail-card art-${card.theme}"><div class="wallet-card-top"><span class="wallet-brand">moneta<span>.</span></span><span class="sample-pill">DEMO</span></div><span class="wallet-chip" aria-hidden="true"><i></i><i></i><i></i></span><div class="wallet-card-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;${card.last4}</div><div class="wallet-card-bottom"><div><small>CARDHOLDER</small><strong>DEMO USER</strong></div><span class="wallet-network">${card.network}</span></div><span class="wallet-orbit orbit-one"></span><span class="wallet-orbit orbit-two"></span></div><dl class="receipt-details"><div><dt>Card type</dt><dd>Credit card · sample only</dd></div><div><dt>Network</dt><dd>${card.network}</dd></div><div><dt>Cardholder</dt><dd>Demo User</dd></div><div><dt>Number</dt><dd>Only last four shown · ${card.last4}</dd></div></dl><div class="modal-notice"><strong>No real card is linked</strong><span>This sample image cannot be used for a payment or cash advance.</span></div>`,
+    `<div class="wallet-card detail-card art-${card.theme}"><div class="wallet-card-top"><span class="wallet-brand">CaSer</span><span class="sample-pill">DEMO</span></div><span class="wallet-chip" aria-hidden="true"><i></i><i></i><i></i></span><div class="wallet-card-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;${card.last4}</div><div class="wallet-card-bottom"><div><small>CARDHOLDER</small><strong>DEMO USER</strong></div><span class="wallet-network">${card.network}</span></div><span class="wallet-orbit orbit-one"></span><span class="wallet-orbit orbit-two"></span></div><dl class="receipt-details"><div><dt>Card type</dt><dd>Credit card · sample only</dd></div><div><dt>Network</dt><dd>${card.network}</dd></div><div><dt>Cardholder</dt><dd>Demo User</dd></div><div><dt>Number</dt><dd>Only last four shown · ${card.last4}</dd></div></dl><div class="modal-notice"><strong>No real card is linked</strong><span>This sample image cannot be used for a payment or cash advance.</span></div>`,
     `${secondaryButton('Remove sample card', 'remove-sample-card')}${primaryButton(selected ? 'Selected for demo' : 'Use for demo transfer', 'select-sample-card', selected ? 'disabled' : '')}`);
   const modal = $('#modal-content');
   if (card.custom) {
@@ -348,7 +348,7 @@ async function loadPartnerStatus() {
 }
 
 function showModal(title, content, actions = '') {
-  modalContent.innerHTML = `<span class="modal-kicker">MONETA · INDIA PILOT</span><h2 id="modal-title">${title}</h2><div class="modal-body">${content}</div>${actions ? `<div class="modal-actions">${actions}</div>` : ''}`;
+  modalContent.innerHTML = `<span class="modal-kicker">CASER · INDIA PILOT</span><h2 id="modal-title">${title}</h2><div class="modal-body">${content}</div>${actions ? `<div class="modal-actions">${actions}</div>` : ''}`;
   modalBackdrop.hidden = false;
   document.body.classList.add('modal-open');
   modalBackdrop.querySelector('.modal-close').focus();
