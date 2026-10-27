@@ -1,4 +1,4 @@
-# Moneta card-to-savings pilot
+# CaSer card-to-savings pilot
 
 A dependency-free web app shell for a private India pilot. It presents the cardholder flow for an issuer-approved cash advance from a person's available credit limit to that same person's savings account.
 
